@@ -15,9 +15,9 @@ function App() {
   }, [creators]);
 
   return (
-    <div className="h-[100vh] flex flex-col text-gray-400">
+    <div className="h-[100vh] text-xs flex flex-col text-gray-400">
       <AddCreator />
-      <div className="grid text-xs font-semibold grid-cols-5 gap-6 px-10">
+      <div className="grid font-semibold  sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 gap-6 px-10">
         {status.map((state, index) => (
           <StatusBlock
             key={state.id}
