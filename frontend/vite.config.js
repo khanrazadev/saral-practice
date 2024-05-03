@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "http://localhost:8000",
+      "/api": "https://saral-practice.onrender.com",
       "/external-images": {
         target: "https://scontent-mad1-1.cdninstagram.com",
         changeOrigin: true,
