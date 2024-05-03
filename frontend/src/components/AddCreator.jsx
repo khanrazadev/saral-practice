@@ -18,7 +18,7 @@ const AddCreator = () => {
     }
   };
   return (
-    <div className="mx-auto space-x-4 py-10 gap-2">
+    <div className="flex-col md:flex-row items-center justify-center flex mx-auto py-10 gap-2">
       <input
         value={creator}
         className="input input-primary"
