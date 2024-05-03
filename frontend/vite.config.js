@@ -9,7 +9,7 @@ export default defineConfig({
       "/external-images": {
         target: "https://scontent-mad1-1.cdninstagram.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/external-images/, ""),
+        secure: false,
       },
     },
   },
