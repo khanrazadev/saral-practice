@@ -53,7 +53,7 @@ const Creator = ({ creator, status }) => {
       <div className="text-xs flex justify-around">
         <div className="flex justify-center items-center text-center gap-2">
           <img
-            src={`/external-images/${trimmedAvatar}`}
+            src={avatar}
             alt=""
             className="w-10 h-10 object-cover rounded-full"
           />
