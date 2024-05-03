@@ -3,22 +3,19 @@ import dotenv from "dotenv";
 import errorHandler from "./middleware/error-handler.js";
 import connectDb from "./config/connection.js";
 import creatorRoutes from "./routes/creator-routes.js";
-import helmet from "helmet";
 import cors from "cors";
 dotenv.config();
 
-const app = express();
 const PORT = process.env.PORT || 3010;
+const app = express();
+const corsOptions = {
+  origin: "https://saral-practice.vercel.app",
+};
+
 connectDb();
 
 app.use(express.json());
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.use(
-  cors({
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  })
-);
+app.use(cors(corsOptions));
 app.use("/api/creator", creatorRoutes);
 app.use(errorHandler);
 
