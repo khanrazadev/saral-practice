@@ -6,17 +6,13 @@ import creatorRoutes from "./routes/creator-routes.js";
 import cors from "cors";
 dotenv.config();
 
-const PORT = process.env.PORT || 3010;
-
 const app = express();
-const corsOptions = {
-  origin: "https://saral-practice.vercel.app",
-};
-
+const PORT = process.env.PORT || 3010;
 connectDb();
 
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
+
 app.use("/api/creator", creatorRoutes);
 app.use(errorHandler);
 
