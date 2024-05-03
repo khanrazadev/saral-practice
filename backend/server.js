@@ -11,15 +11,12 @@ const PORT = process.env.PORT || 3010;
 connectDb();
 
 app.use(express.json());
-
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
-
 app.use("/api/creator", creatorRoutes);
 app.use(errorHandler);
 
