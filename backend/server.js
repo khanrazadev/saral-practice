@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import errorHandler from "./middleware/error-handler.js";
 import connectDb from "./config/connection.js";
 import creatorRoutes from "./routes/creator-routes.js";
+import helmet from "helmet";
 import cors from "cors";
 dotenv.config();
 
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3010;
 connectDb();
 
 app.use(express.json());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(
   cors({
     origin: "*",
