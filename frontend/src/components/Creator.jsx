@@ -34,7 +34,7 @@ const Creator = ({ creator, status }) => {
   const removeCreatorHandler = async () => {
     try {
       await axios.delete(
-        `https://saral-practice.onrender.com/api/creator/${creator._id}`
+        `/api/creator/${creator._id}`
       );
       fetchData();
     } catch (error) {

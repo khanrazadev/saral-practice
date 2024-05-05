@@ -10,7 +10,7 @@ export const CreatorProvider = (props) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://saral-practice.onrender.com/api/creator"
+        "/api/creator"
       );
       setCreators(response.data.data);
     } catch (error) {
