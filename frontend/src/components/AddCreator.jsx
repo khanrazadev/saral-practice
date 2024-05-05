@@ -8,7 +8,7 @@ const AddCreator = () => {
 
   const addCreatorHandler = async () => {
     try {
-      await axios.post("/api/creator", {
+      await axios.post("https://saral-practice.onrender.com/api/creator", {
         username: creator,
       });
       fetchData();

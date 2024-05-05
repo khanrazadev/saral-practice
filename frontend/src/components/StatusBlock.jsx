@@ -20,7 +20,7 @@ const StatusBlock = ({ state, count, creators }) => {
     if (!id) return;
 
     try {
-      await axios.put(`/api/creator/${id}`, {
+      await axios.put(`https://saral-practice.onrender.com/api/creator/${id}`, {
         newStatus: state.name,
       });
       fetchData();
