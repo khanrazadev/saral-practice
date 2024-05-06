@@ -6,11 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": "https://saral-practice.onrender.com",
-      "/external-images": {
-        target: "https://scontent-mad1-1.cdninstagram.com",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/external-images/, ""),
-      },
+      "/external-images": "https://scontent-mad1-1.cdninstagram.com",
     },
   },
   plugins: [react()],
